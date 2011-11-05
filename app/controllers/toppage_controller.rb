@@ -2,6 +2,10 @@
 
 class ToppageController < ApplicationController
   def index
-    @msg = 'top page'
+    @msg = 'トップページ'
+  end
+  
+  def result
+    @msg = '結果'
   end
 end
