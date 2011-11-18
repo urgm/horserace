@@ -1,0 +1,39 @@
+<h1>Listing programs</h1>
+
+<table>
+  <tr>
+    <th>Race no</th>
+    <th>Position no</th>
+    <th>Horse no</th>
+    <th>Horse name</th>
+    <th>Age</th>
+    <th>Sex</th>
+    <th>Jockey</th>
+    <th>Horse weight</th>
+    <th>Weight</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @programs.each do |program| %>
+  <tr>
+    <td><%= program.race_no %></td>
+    <td><%= program.position_no %></td>
+    <td><%= program.horse_no %></td>
+    <td><%= program.horse_name %></td>
+    <td><%= program.age %></td>
+    <td><%= program.sex %></td>
+    <td><%= program.jockey %></td>
+    <td><%= program.horse_weight %></td>
+    <td><%= program.weight %></td>
+    <td><%= link_to 'Show', program %></td>
+    <td><%= link_to 'Edit', edit_program_path(program) %></td>
+    <td><%= link_to 'Destroy', program, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Program', new_program_path %>

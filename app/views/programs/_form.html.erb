@@ -1,0 +1,53 @@
+<%= form_for(@program) do |f| %>
+  <% if @program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@program.errors.count, "error") %> prohibited this program from being saved:</h2>
+
+      <ul>
+      <% @program.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :race_no %><br />
+    <%= f.text_field :race_no %>
+  </div>
+  <div class="field">
+    <%= f.label :position_no %><br />
+    <%= f.text_field :position_no %>
+  </div>
+  <div class="field">
+    <%= f.label :horse_no %><br />
+    <%= f.text_field :horse_no %>
+  </div>
+  <div class="field">
+    <%= f.label :horse_name %><br />
+    <%= f.text_field :horse_name %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %><br />
+    <%= f.text_field :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :jockey %><br />
+    <%= f.text_field :jockey %>
+  </div>
+  <div class="field">
+    <%= f.label :horse_weight %><br />
+    <%= f.text_field :horse_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

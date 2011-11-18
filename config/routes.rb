@@ -1,4 +1,6 @@
 HorseRace::Application.routes.draw do
+  resources :programs
+
   resources :tips
 
   # The priority is based upon order of creation:
