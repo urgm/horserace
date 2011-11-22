@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  race_no: 1
+  user_name: MyString
+  type: 1
+  first_horse_no: 1
+  second_horse_no: 1
+  third_horse_no: 1
+  amount: 1
+
+two:
+  race_no: 1
+  user_name: MyString
+  type: 1
+  first_horse_no: 1
+  second_horse_no: 1
+  third_horse_no: 1
+  amount: 1

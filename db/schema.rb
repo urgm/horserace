@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111118213226) do
+ActiveRecord::Schema.define(:version => 20111122213819) do
+
+  create_table "bets", :force => true do |t|
+    t.integer  "race_no"
+    t.string   "user_name"
+    t.integer  "type"
+    t.integer  "first_horse_no"
+    t.integer  "second_horse_no"
+    t.integer  "third_horse_no"
+    t.integer  "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "programs", :force => true do |t|
     t.integer  "race_no"
