@@ -1,7 +1,7 @@
 class CreateBets < ActiveRecord::Migration
   def self.up
     create_table :bets do |t|
-      t.integer :race_no
+      t.integer :race_id
       t.string :user_name
       t.integer :type
       t.integer :first_horse_no

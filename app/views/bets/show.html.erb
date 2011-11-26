@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Race:</b>
+  <%= @bet.race_id %>
+</p>
+
+<p>
+  <b>User name:</b>
+  <%= @bet.user_name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @bet.type %>
+</p>
+
+<p>
+  <b>First horse no:</b>
+  <%= @bet.first_horse_no %>
+</p>
+
+<p>
+  <b>Second horse no:</b>
+  <%= @bet.second_horse_no %>
+</p>
+
+<p>
+  <b>Third horse no:</b>
+  <%= @bet.third_horse_no %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @bet.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_bet_path(@bet) %> |
+<%= link_to 'Back', bets_path %>
