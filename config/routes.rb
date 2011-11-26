@@ -1,4 +1,6 @@
 HorseRace::Application.routes.draw do
+  resources :races
+
   resources :bets
 
   resources :programs

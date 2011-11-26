@@ -1,7 +1,7 @@
 class CreatePrograms < ActiveRecord::Migration
   def self.up
     create_table :programs do |t|
-      t.integer :race_no
+      t.integer :race_id
       t.integer :position_no
       t.integer :horse_no
       t.string :horse_name

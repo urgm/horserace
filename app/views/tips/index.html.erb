@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Race</th>
     <th>User name</th>
     <th>Horse no</th>
     <th>Rank</th>
@@ -12,6 +13,7 @@
 
 <% @tips.each do |tip| %>
   <tr>
+    <td><%= tip.race_id %></td>
     <td><%= tip.user_name %></td>
     <td><%= tip.horse_no %></td>
     <td><%= tip.rank %></td>

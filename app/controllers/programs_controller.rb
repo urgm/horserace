@@ -2,7 +2,7 @@ class ProgramsController < ApplicationController
   # GET /programs
   # GET /programs.xml
   def index
-    @programs = Program.order('horse_no')
+    @programs = Program.all
 
     respond_to do |format|
       format.html # index.html.erb

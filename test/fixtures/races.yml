@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  race_no: 1
+  race_name: MyString
+  race_time: 1
+  course_no: 1
+  meeting: 1
+  year: 1
+  day: 1
+  distance: 1
+
+two:
+  race_no: 1
+  race_name: MyString
+  race_time: 1
+  course_no: 1
+  meeting: 1
+  year: 1
+  day: 1
+  distance: 1
