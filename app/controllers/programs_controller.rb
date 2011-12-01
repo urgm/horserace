@@ -80,4 +80,8 @@ class ProgramsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def belongs
+    @program = Program.find(params[:id])
+  end
 end

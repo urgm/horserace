@@ -6,6 +6,7 @@
 #TODO: 不要なら削除
     <th>レース番号（不要？）</th>
 %>
+    <th>レース名</th>
     <th>枠番</th>
     <th>馬番</th>
     <th>馬名</th>
@@ -31,6 +32,7 @@
     #TODO: 不要なら削除
     <td><%= program.race_id %></td>
   <% end %>
+    <td><%= program.race.race_name %></td>
     <td><%= program.position_no %></td>
     <td><%= program.horse_no %></td>
     <td><%= program.horse_name %></td>
@@ -54,7 +56,4 @@
 
 <br />
 
-<% if false %>
-#TODO: 不要なら削除
 <%= link_to 'New Program', new_program_path %>
-<% end %>
