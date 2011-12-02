@@ -34,4 +34,22 @@
 
 <br />
 
+<h2>出馬表</h2>
+
+<table>
+  <tr>
+    <th>枠番</th>
+    <th>馬番</th>
+    <th>馬名</th>
+  </tr>
+
+<% @races.each do |race| %>
+  <tr>
+    <td><%= race.program.position_no %></td>
+    <td><%= race.program.horse_no %></td>
+    <td><%= race.program.horse_name %></td>
+  </tr>
+<% end %>
+</table>
+
 <%= link_to 'New Race', new_race_path %>

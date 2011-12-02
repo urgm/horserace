@@ -80,4 +80,12 @@ class RacesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def hasone
+    @race = Race.find(params[:id])
+  end
+  
+  def hasmany
+    @race = Race.find(params[:id])
+  end
 end
