@@ -1,15 +1,8 @@
-<h1>Listing races</h1>
+<h1>レース一覧</h1>
 
 <table>
   <tr>
-    <th>Race no</th>
-    <th>Race name</th>
-    <th>Race time</th>
-    <th>Course no</th>
-    <th>Meeting</th>
-    <th>Year</th>
-    <th>Day</th>
-    <th>Distance</th>
+    <th>レース名</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,39 +10,13 @@
 
 <% @races.each do |race| %>
   <tr>
-    <td><%= race.race_no %></td>
-    <td><%= race.race_name %></td>
-    <td><%= race.race_time %></td>
-    <td><%= race.course_no %></td>
-    <td><%= race.meeting %></td>
-    <td><%= race.year %></td>
-    <td><%= race.day %></td>
-    <td><%= race.distance %></td>
-    <td><%= link_to 'Show', race %></td>
-    <td><%= link_to 'Edit', edit_race_path(race) %></td>
-    <td><%= link_to 'Destroy', race, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to race.race_name, race %></td>
+    <td><%= link_to '編集', edit_race_path(race) %></td>
+    <td><%= link_to '削除', race, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<h2>出馬表</h2>
-
-<table>
-  <tr>
-    <th>枠番</th>
-    <th>馬番</th>
-    <th>馬名</th>
-  </tr>
-
-<% @races.each do |race| %>
-  <tr>
-    <td><%= race.program.position_no %></td>
-    <td><%= race.program.horse_no %></td>
-    <td><%= race.program.horse_name %></td>
-  </tr>
-<% end %>
-</table>
 
 <%= link_to 'New Race', new_race_path %>
