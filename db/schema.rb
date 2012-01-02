@@ -10,10 +10,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111122213819) do
+ActiveRecord::Schema.define(:version => 20111211212610) do
 
   create_table "bets", :force => true do |t|
-    t.integer  "race_no"
+    t.integer  "race_id"
     t.string   "user_name"
     t.integer  "type"
     t.integer  "first_horse_no"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20111122213819) do
   end
 
   create_table "programs", :force => true do |t|
-    t.integer  "race_no"
+    t.integer  "race_id"
     t.integer  "position_no"
     t.integer  "horse_no"
     t.string   "horse_name"
@@ -38,10 +38,31 @@ ActiveRecord::Schema.define(:version => 20111122213819) do
     t.datetime "updated_at"
   end
 
+  create_table "races", :force => true do |t|
+    t.integer  "race_no"
+    t.string   "race_name"
+    t.integer  "race_time"
+    t.integer  "course_no"
+    t.integer  "meeting"
+    t.integer  "year"
+    t.integer  "day"
+    t.integer  "distance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tips", :force => true do |t|
+    t.integer  "race_id"
     t.string   "user_name"
     t.integer  "horse_no"
     t.integer  "rank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "user_name"
+    t.string   "user_nickname"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
