@@ -84,4 +84,18 @@ class ProgramsController < ApplicationController
   def belongs
     @program = Program.find(params[:id])
   end
+  
+  def import
+    @programs = ProgramUtils.import
+
+    begin
+      Program.transaction do
+        for @programs in @program
+          @program.save!
+        end
+      end
+    rescue
+      #TODO: エラー処理
+    end
+  end
 end

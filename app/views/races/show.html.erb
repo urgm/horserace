@@ -13,6 +13,9 @@
     <th>性別（牡牝センで）</th>
     <th>騎手</th>
     <th>斤量</th>
+<% @users.each do |user| %>
+    <th><%= user.user_nickname %></th>
+<% end %>
   </tr>
 
 <% @race.programs.each do |program| %>

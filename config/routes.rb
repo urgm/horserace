@@ -1,3 +1,5 @@
+require 'programsUtils'
+
 HorseRace::Application.routes.draw do
   resources :users
 
@@ -5,6 +7,7 @@ HorseRace::Application.routes.draw do
 
   resources :bets
 
+  get "programs/import"
   resources :programs
 
   resources :tips

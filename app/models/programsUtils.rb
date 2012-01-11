@@ -1,6 +1,9 @@
 class ProgramUtils
   #FIXME パラメータは仮
-  def import(program_type = race_old, race_id = c201106050611)
+  def import()
+    program_type = 'race_old'
+    race_id = 'c201106050611'
+    
     url = "http://race.netkeiba.com/?pid=%s&id=%s" % [program_type, race_id]
     doc = Nokogiri.HTML(open(url))
     
