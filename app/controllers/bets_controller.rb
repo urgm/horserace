@@ -25,7 +25,10 @@ class BetsController < ApplicationController
   # GET /bets/new.xml
   def new
     @bet = Bet.new
-
+    @programs = Program.find_all_by_race_id(params[:race_id])
+        
+    @msg = params[:race_id]
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @bet }
