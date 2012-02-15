@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111211212610) do
+ActiveRecord::Schema.define(:version => 20120208214256) do
 
   create_table "bets", :force => true do |t|
     t.integer  "race_id"
@@ -61,10 +61,15 @@ ActiveRecord::Schema.define(:version => 20111211212610) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "user_name"
-    t.string   "user_nickname"
+    t.string   "user_name",     :null => false
+    t.string   "user_nickname", :null => false
+    t.string   "password",      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["password"], :name => "index_users_on_password", :unique => true
+  add_index "users", ["user_name"], :name => "index_users_on_user_name", :unique => true
+  add_index "users", ["user_nickname"], :name => "index_users_on_user_nickname", :unique => true
 
 end

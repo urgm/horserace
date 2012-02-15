@@ -15,25 +15,25 @@
     <tr>
       <th><%= f.label '馬券種別（仮）' %></th>
       <td>
-        <%= select_tag('type', options_for_select({'単勝' => 1, '複勝' => 2, '枠連' => 3, '馬連' => 4, '馬単' => 5, 'ワイド' => 6, '3連復' => 7, '3連単' => 8})) %>
+        <%= select_tag('type', options_for_select([['単勝',1], ['複勝',2], ['枠連',3], ['馬連',4], ['馬単',5], ['ワイド',6], ['3連復',7], ['3連単',8]])) %>
       </td>
     <tr>
     <tr>
       <th><%= f.label '1着馬' %><br /></th>
       <td>
-        <%= select_tag('first_horse_no', options_from_collection_for_select(@programs ,:horse_name, :horse_name)) %>
+        <%= select_tag('first_horse_no', options_from_collection_for_select(@programs , :horse_no, :horse_no)) %>
       </td>
     </tr>
     <tr>
       <th><%= f.label '2着馬' %><br /></th>
       <td>
-        <%= select_tag('second_horse_no', options_from_collection_for_select(@programs ,:horse_name, :horse_name)) %>
+        <%= select_tag('second_horse_no', options_from_collection_for_select(@programs ,:horse_no, :horse_no)) %>
       </td>
     </tr>
     <tr>
       <th><%= f.label '3着馬' %><br /></th>
       <td>
-        <%= select_tag('third_horse_no', options_from_collection_for_select(@programs ,:horse_name, :horse_name)) %>
+        <%= select_tag('third_horse_no', options_from_collection_for_select(@programs ,:horse_no, :horse_no)) %>
       </td>
     </tr>
     <tr>
