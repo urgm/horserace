@@ -1,6 +1,10 @@
 require 'programsUtils'
 
 HorseRace::Application.routes.draw do
+  get "home/index"
+
+  devise_for :users
+
   resources :users
 
   resources :races
@@ -43,9 +47,7 @@ HorseRace::Application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
+# Sample resource route with more complex sub-resources #   resources :products do
   #     resources :comments
   #     resources :sales do
   #       get 'recent', :on => :collection
@@ -62,6 +64,7 @@ HorseRace::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 
