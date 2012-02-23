@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
     :presence => true,
     :uniqueness => true
 
-  validates :password,
-    :presence => true,
-    :uniqueness => true
+  has_secure_password
+  validates_presence_of :password, :on => :create
 end
