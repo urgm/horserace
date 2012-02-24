@@ -1,4 +1,4 @@
-require 'programsUtils'
+require 'ProgramUtils'
 
 HorseRace::Application.routes.draw do
   get "home/index"

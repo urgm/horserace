@@ -1,10 +1,10 @@
+require 'nokogiri'
+require 'open-uri'
+
 class ProgramUtils
   #FIXME パラメータは仮
-  def import()
-    program_type = 'race_old'
-    race_id = 'c201106050611'
-    
-    url = "http://race.netkeiba.com/?pid=%s&id=%s" % [program_type, race_id]
+  def import(program_type='race_old', race_id = 'c201106050611')
+    url = "http://race.netkeiba.com/?pid=#{program_type}&id=#{race_id}"
     doc = Nokogiri.HTML(open(url))
     
     trs = doc.search("//table[@class='race_table_old nk_tb_common']//tr[@class='bml1']")
