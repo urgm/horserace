@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Race:</b>
+  <%= @program.race_id %>
+</p>
+
+<p>
+  <b>Position no:</b>
+  <%= @program.position_no %>
+</p>
+
+<p>
+  <b>Horse no:</b>
+  <%= @program.horse_no %>
+</p>
+
+<p>
+  <b>Horse name:</b>
+  <%= @program.horse_name %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @program.age %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @program.sex %>
+</p>
+
+<p>
+  <b>Jockey:</b>
+  <%= @program.jockey %>
+</p>
+
+<p>
+  <b>Horse weight:</b>
+  <%= @program.horse_weight %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%= @program.weight %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>

@@ -1,0 +1,59 @@
+<h1>出馬表</h1>
+
+<table>
+  <tr>
+<%#
+#TODO: 不要なら削除
+    <th>レース番号（不要？）</th>
+%>
+    <th>レース名</th>
+    <th>枠番</th>
+    <th>馬番</th>
+    <th>馬名</th>
+    <th>馬齢</th>
+    <th>性別（牡牝センで）</th>
+    <th>騎手</th>
+<%#
+#TODO: 不要なら削除
+    <th>馬体重（不要？）</th>
+%>
+    <th>斤量</th>
+<%#
+#TODO: 不要なら削除
+    <th></th>
+    <th></th>
+    <th></th>
+%>
+  </tr>
+
+<% @programs.each do |program| %>
+  <tr>
+  <% if false %>
+    #TODO: 不要なら削除
+    <td><%= program.race_id %></td>
+  <% end %>
+    <td><%= program.race.race_name %></td>
+    <td><%= program.position_no %></td>
+    <td><%= program.horse_no %></td>
+    <td><%= program.horse_name %></td>
+    <td><%= program.age %></td>
+    <td><%= program.sex %></td>
+    <td><%= program.jockey %></td>
+  <% if false %>
+    #TODO: 不要なら削除
+    <td><%= program.horse_weight %></td>
+  <% end %>
+    <td><%= program.weight %></td>
+  <% if false %>
+    #TODO: 不要なら削除
+    <td><%= link_to 'Show', program %></td>
+    <td><%= link_to 'Edit', edit_program_path(program) %></td>
+    <td><%= link_to 'Destroy', program, :confirm => 'Are you sure?', :method => :delete %></td>
+  <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Program', new_program_path %>

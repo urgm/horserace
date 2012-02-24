@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @race.race_name %></h2>
+
+<h2>出馬表</h2>
+
+<table>
+  <tr>
+    <th>枠番</th>
+    <th>馬番</th>
+    <th>馬名</th>
+    <th>馬齢</th>
+    <th>性別（牡牝センで）</th>
+    <th>騎手</th>
+    <th>斤量</th>
+<% @users.each do |user| %>
+    <th><%= user.user_nickname %></th>
+<% end %>
+  </tr>
+
+<% @race.programs.each do |program| %>
+  <tr>
+    <td><%= program.position_no %></td>
+    <td><%= program.horse_no %></td>
+    <td><%= program.horse_name %></td>
+    <td><%= program.age %></td>
+    <td><%= program.sex %></td>
+    <td><%= program.jockey %></td>
+    <td><%= program.horse_weight %></td>
+  </tr>
+<% end %>
+</table>
+
+<h2>買い目</h2>
+
+<table>
+  <tr>
+    <th>ユーザー名</th>
+    <th>馬券の種類（仮）</th>
+    <th>番号（仮）</th>
+    <th>金額</th>
+  </tr>
+  
+<% @race.bets.each do |bet| %>
+  <tr>
+    <td><%= bet.user_name %></td>
+    <td><%= bet.type %></td>
+    <td><%= bet.first_horse_no %></td>
+    <td><%= bet.amount %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Edit', edit_race_path(@race) %> |
+<%= link_to 'Back', races_path %>

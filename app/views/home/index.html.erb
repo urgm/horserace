@@ -1,0 +1,13 @@
+<h1>Home#index</h1>
+<% if user_signed_in? %>
+<%= link_to "ログアウト", destroy_user_session_path, :method => :delete %>
+<% else %>
+<%= link_to "ログイン", new_user_session_path %>
+<% end %>
+<%= link_to "レース一覧", races_path %>
+　<p>出馬表</p>
+　<p>予想</p>
+　<p>買い目</p>
+<p>グループ成績</p>
+<p>個人成績</p>
+<p>ユーザー情報管理</p>

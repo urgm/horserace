@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  race_id: 1
+  user_name: MyString
+  horse_no: 1
+  rank: 1
+
+two:
+  race_id: 1
+  user_name: MyString
+  horse_no: 1
+  rank: 1

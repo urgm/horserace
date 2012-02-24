@@ -1,0 +1,22 @@
+<h1>レース一覧</h1>
+
+<table>
+  <tr>
+    <th>レース名</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @races.each do |race| %>
+  <tr>
+    <td><%= link_to race.race_name, race %></td>
+    <td><%= link_to '編集', edit_race_path(race) %></td>
+    <td><%= link_to '削除', race, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Race', new_race_path %>
